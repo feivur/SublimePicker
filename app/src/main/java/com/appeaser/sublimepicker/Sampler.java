@@ -109,7 +109,7 @@ public class Sampler extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sampler);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         if (getSupportActionBar() != null) {
@@ -125,38 +125,38 @@ public class Sampler extends AppCompatActivity {
             }
         });
 
-        ivLaunchPicker = (ImageView) findViewById(R.id.ivLaunchPicker);
-        cbDatePicker = (CheckBox) findViewById(R.id.cbDatePicker);
-        cbTimePicker = (CheckBox) findViewById(R.id.cbTimePicker);
-        cbRecurrencePicker = (CheckBox) findViewById(R.id.cbRecurrencePicker);
-        rbDatePicker = (RadioButton) findViewById(R.id.rbDatePicker);
-        rbTimePicker = (RadioButton) findViewById(R.id.rbTimePicker);
-        rbRecurrencePicker = (RadioButton) findViewById(R.id.rbRecurrencePicker);
-        tvPickerToShow = (TextView) findViewById(R.id.tvPickerToShow);
-        tvActivatedPickers = (TextView) findViewById(R.id.tvActivatedPickers);
-        svMainContainer = (ScrollView) findViewById(R.id.svMainContainer);
+        ivLaunchPicker = findViewById(R.id.ivLaunchPicker);
+        cbDatePicker = findViewById(R.id.cbDatePicker);
+        cbTimePicker = findViewById(R.id.cbTimePicker);
+        cbRecurrencePicker = findViewById(R.id.cbRecurrencePicker);
+        rbDatePicker = findViewById(R.id.rbDatePicker);
+        rbTimePicker = findViewById(R.id.rbTimePicker);
+        rbRecurrencePicker = findViewById(R.id.rbRecurrencePicker);
+        tvPickerToShow = findViewById(R.id.tvPickerToShow);
+        tvActivatedPickers = findViewById(R.id.tvActivatedPickers);
+        svMainContainer = findViewById(R.id.svMainContainer);
 
-        cbAllowDateRangeSelection = (CheckBox) findViewById(R.id.cbAllowDateRangeSelection);
+        cbAllowDateRangeSelection = findViewById(R.id.cbAllowDateRangeSelection);
 
-        llDateHolder = (LinearLayout) findViewById(R.id.llDateHolder);
-        llDateRangeHolder = (LinearLayout) findViewById(R.id.llDateRangeHolder);
+        llDateHolder = findViewById(R.id.llDateHolder);
+        llDateRangeHolder = findViewById(R.id.llDateRangeHolder);
 
         // Initialize views to display the chosen Date, Time & Recurrence options
-        tvYear = ((TextView) findViewById(R.id.tvYear));
-        tvMonth = ((TextView) findViewById(R.id.tvMonth));
-        tvDay = ((TextView) findViewById(R.id.tvDay));
+        tvYear = findViewById(R.id.tvYear);
+        tvMonth = findViewById(R.id.tvMonth);
+        tvDay = findViewById(R.id.tvDay);
 
-        tvStartDate = ((TextView) findViewById(R.id.tvStartDate));
-        tvEndDate = ((TextView) findViewById(R.id.tvEndDate));
+        tvStartDate = findViewById(R.id.tvStartDate);
+        tvEndDate = findViewById(R.id.tvEndDate);
 
-        tvHour = ((TextView) findViewById(R.id.tvHour));
-        tvMinute = ((TextView) findViewById(R.id.tvMinute));
+        tvHour = findViewById(R.id.tvHour);
+        tvMinute = findViewById(R.id.tvMinute);
 
-        tvRecurrenceOption = ((TextView) findViewById(R.id.tvRecurrenceOption));
-        tvRecurrenceRule = ((TextView) findViewById(R.id.tvRecurrenceRule));
+        tvRecurrenceOption = findViewById(R.id.tvRecurrenceOption);
+        tvRecurrenceRule = findViewById(R.id.tvRecurrenceRule);
 
         rlDateTimeRecurrenceInfo
-                = (RelativeLayout) findViewById(R.id.rlDateTimeRecurrenceInfo);
+                = findViewById(R.id.rlDateTimeRecurrenceInfo);
 
         ivLaunchPicker.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
         ivLaunchPicker.setOnClickListener(new View.OnClickListener() {

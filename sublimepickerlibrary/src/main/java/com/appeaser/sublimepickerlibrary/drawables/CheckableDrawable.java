@@ -27,6 +27,7 @@ import android.graphics.Paint;
 import android.graphics.PixelFormat;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.view.animation.AnticipateInterpolator;
 import android.view.animation.OvershootInterpolator;
 
@@ -148,9 +149,11 @@ public class CheckableDrawable extends Drawable {
                 ANIMATION_DURATION_COLLAPSE;
 
         oaTransition.setDuration(duration);
-        oaTransition.setInterpolator(expand ?
-                mExpandInterpolator :
-                mCollapseInterpolator);
+        if ( Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1 ) {
+            oaTransition.setInterpolator(expand ?
+                    mExpandInterpolator :
+                    mCollapseInterpolator);
+        }
 
         ObjectAnimator oaAlpha = ObjectAnimator.ofInt(this,
                 "alpha",

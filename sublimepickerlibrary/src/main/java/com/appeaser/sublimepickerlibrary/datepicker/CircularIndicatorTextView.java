@@ -32,7 +32,7 @@ import com.appeaser.sublimepickerlibrary.R;
  * Indicator used for selected year in YearPickerView
  * Needs fixing.
  */
-class CircularIndicatorTextView extends TextView {
+class CircularIndicatorTextView extends android.support.v7.widget.AppCompatTextView {
     private static final int SELECTED_CIRCLE_ALPHA = 60;
 
     private final Paint mCirclePaint = new Paint();
@@ -92,13 +92,4 @@ class CircularIndicatorTextView extends TextView {
         }
     }
 
-    @Override
-    public CharSequence getContentDescription() {
-        CharSequence itemText = getText();
-        if (mDrawIndicator) {
-            return String.format(mItemIsSelectedText, itemText);
-        } else {
-            return itemText;
-        }
-    }
 }

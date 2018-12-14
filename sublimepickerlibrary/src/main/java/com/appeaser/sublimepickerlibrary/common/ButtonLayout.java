@@ -36,7 +36,11 @@ import android.widget.LinearLayout;
 import com.appeaser.sublimepickerlibrary.R;
 import com.appeaser.sublimepickerlibrary.utilities.SUtils;
 
-public class ButtonLayout extends LinearLayout implements View.OnClickListener {
+import org.apmem.tools.layouts.FlowLayout;
+
+import static android.widget.LinearLayout.HORIZONTAL;
+
+public class ButtonLayout extends FlowLayout implements View.OnClickListener {
     // Can be 'android.widget.Button' or 'android.widget.ImageView'
     View mPositiveButton, mNegativeButton;
 
@@ -65,13 +69,13 @@ public class ButtonLayout extends LinearLayout implements View.OnClickListener {
         initialize();
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+/*    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public ButtonLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(SUtils.createThemeWrapper(context, R.attr.sublimePickerStyle,
                 R.style.SublimePickerStyleLight, R.attr.spButtonLayoutStyle,
                 R.style.ButtonLayoutStyle), attrs, defStyleAttr, defStyleRes);
         initialize();
-    }
+    }*/
 
     void initialize() {
         Context context = getContext();
@@ -83,8 +87,9 @@ public class ButtonLayout extends LinearLayout implements View.OnClickListener {
             setLayoutDirection(LAYOUT_DIRECTION_LOCALE);
         }
 
+
         setOrientation(HORIZONTAL);
-        setGravity(Gravity.BOTTOM);
+        setGravity(Gravity.BOTTOM | Gravity.RIGHT);
 
         setPadding(res.getDimensionPixelSize(R.dimen.sp_button_bar_padding_start),
                 res.getDimensionPixelSize(R.dimen.sp_button_bar_padding_top),
