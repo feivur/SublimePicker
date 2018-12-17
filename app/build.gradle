@@ -22,8 +22,8 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    //implementation project(':sublimepickerlibrary')
-    implementation(name: 'sublimepickerlibrary', ext: 'aar')
+    implementation project(':sublimepickerlibrary')
+    //implementation(name: 'sublimepickerlibrary', ext: 'aar')
 
     implementation 'com.android.support:appcompat-v7:' + rootProject.ext.supportLibVersion
     implementation 'com.android.support:support-v4:' + rootProject.ext.supportLibVersion

@@ -181,14 +181,14 @@ public class SublimeTimePicker extends FrameLayout
         mHeaderView = mainView.findViewById(R.id.time_header);
 
         // Set up hour/minute labels.
-        mHourView = (TextView) mainView.findViewById(R.id.hours);
+        mHourView = mainView.findViewById(R.id.hours);
         mHourView.setOnClickListener(mClickListener);
 
         ViewCompat.setAccessibilityDelegate(mHourView, new ClickActionDelegate(mContext, R.string.select_hours));
 
-        mSeparatorView = (TextView) mainView.findViewById(R.id.separator);
+        mSeparatorView = mainView.findViewById(R.id.separator);
 
-        mMinuteView = (TextView) mainView.findViewById(R.id.minutes);
+        mMinuteView = mainView.findViewById(R.id.minutes);
         mMinuteView.setOnClickListener(mClickListener);
 
         ViewCompat.setAccessibilityDelegate(mMinuteView, new ClickActionDelegate(mContext, R.string.select_minutes));
@@ -200,10 +200,10 @@ public class SublimeTimePicker extends FrameLayout
 
         // Set up AM/PM labels.
         mAmPmLayout = mainView.findViewById(R.id.ampm_layout);
-        mAmLabel = (CheckedTextView) mAmPmLayout.findViewById(R.id.am_label);
+        mAmLabel = mAmPmLayout.findViewById(R.id.am_label);
         mAmLabel.setText(obtainVerbatim(amPmStrings[0]));
         mAmLabel.setOnClickListener(mClickListener);
-        mPmLabel = (CheckedTextView) mAmPmLayout.findViewById(R.id.pm_label);
+        mPmLabel = mAmPmLayout.findViewById(R.id.pm_label);
         mPmLabel.setText(obtainVerbatim(amPmStrings[1]));
         mPmLabel.setOnClickListener(mClickListener);
 
@@ -232,7 +232,7 @@ public class SublimeTimePicker extends FrameLayout
 
         a.recycle();
 
-        mRadialTimePickerView = (RadialTimePickerView) mainView.findViewById(R.id.radial_picker);
+        mRadialTimePickerView = mainView.findViewById(R.id.radial_picker);
 
         setupListeners();
 

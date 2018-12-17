@@ -16,13 +16,11 @@
 
 package com.appeaser.sublimepickerlibrary.common;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.os.Build;
 import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -31,7 +29,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.appeaser.sublimepickerlibrary.R;
 import com.appeaser.sublimepickerlibrary.utilities.SUtils;
@@ -71,7 +68,7 @@ public class ButtonLayout extends FlowLayout implements View.OnClickListener {
 
 /*    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public ButtonLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(SUtils.createThemeWrapper(context, R.attr.sublimePickerStyle,
+        super( SUtils.createThemeWrapper(context, R.attr.sublimePickerStyle,
                 R.style.SublimePickerStyleLight, R.attr.spButtonLayoutStyle,
                 R.style.ButtonLayoutStyle), attrs, defStyleAttr, defStyleRes);
         initialize();
@@ -100,13 +97,13 @@ public class ButtonLayout extends FlowLayout implements View.OnClickListener {
                 Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.sublime_button_panel_layout, this, true);
 
-        mSwitcherButton = (Button) findViewById(R.id.buttonSwitcher);
+        mSwitcherButton = findViewById(R.id.buttonSwitcher);
 
-        Button bPositive = (Button) findViewById(R.id.buttonPositive);
-        Button bNegative = (Button) findViewById(R.id.buttonNegative);
+        Button bPositive = findViewById(R.id.buttonPositive);
+        Button bNegative = findViewById(R.id.buttonNegative);
 
-        ImageView ivPositive = (ImageView) findViewById(R.id.imageViewPositive);
-        ImageView ivNegative = (ImageView) findViewById(R.id.imageViewNegative);
+        ImageView ivPositive = findViewById(R.id.imageViewPositive);
+        ImageView ivNegative = findViewById(R.id.imageViewNegative);
 
         try {
             // obtain float value held by android.R.attr.disabledAlpha
