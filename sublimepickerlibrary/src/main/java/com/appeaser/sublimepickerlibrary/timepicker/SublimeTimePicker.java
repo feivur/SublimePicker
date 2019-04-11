@@ -999,7 +999,7 @@ public class SublimeTimePicker extends FrameLayout
     private void finishKbMode() {
         mInKbMode = false;
         if (!mTypedTimes.isEmpty()) {
-            int values[] = getEnteredTime(null);
+            int[] values = getEnteredTime( null );
             mRadialTimePickerView.setCurrentHour(values[0]);
             mRadialTimePickerView.setCurrentMinute(values[1]);
             if (!mIs24HourView) {
